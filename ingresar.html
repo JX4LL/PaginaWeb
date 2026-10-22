@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Pasion a Caballo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- =========================
+        ENCABEZADO
+    ========================== -->
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="M6 4v9c0 13 20 13 20 0V4" class="horseshoe-shape"></path>
+                <path d="M10 5v8c0 8 12 8 12 0V5" class="horseshoe-inner"></path>
+                <path d="M4.5 4h3M24.5 4h3" class="horseshoe-cap"></path>
+                <circle cx="6" cy="10" r="1.2" class="horseshoe-nail"></circle>
+                <circle cx="8" cy="18" r="1.2" class="horseshoe-nail"></circle>
+                <circle cx="12" cy="21" r="1.2" class="horseshoe-nail"></circle>
+                <circle cx="20" cy="21" r="1.2" class="horseshoe-nail"></circle>
+                <circle cx="24" cy="18" r="1.2" class="horseshoe-nail"></circle>
+                <circle cx="26" cy="10" r="1.2" class="horseshoe-nail"></circle>
+            </svg>
+            Pasion a Caballo
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="index.html#servicios">Servicios</a>
+            <a href="index.html#galeria">Galería</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+        <details class="profile-menu">
+            <summary aria-label="Abrir menú de cuenta">
+                <svg
+                    class="profile-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                >
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21a8 8 0 0 1 16 0"></path>
+                </svg>
+            </summary>
+            <div class="profile-dropdown">
+                <a href="registro.html">Registrarse</a>
+                <a href="ingresar.html">Iniciar sesión</a>
+            </div>
+        </details>
+    </header>
+    <main class="login-main">
+        <section class="login-card" aria-labelledby="login-title">
+            <h1 id="login-title">Bienvenido de nuevo</h1>
+            <p class="login-intro">Ingresa a tu cuenta de Pasion a Caballo.</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="email"
+                        placeholder="tucorreo@ejemplo.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+                <button type="submit">Iniciar sesión</button>
+                <p id="loginMessage" class="login-message" role="status" aria-live="polite"></p>
+            </form>
+            <p class="login-register">¿Aún no tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+        </section>
+    </main>
+</body>
+</html>
