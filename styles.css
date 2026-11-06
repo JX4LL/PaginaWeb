@@ -393,6 +393,208 @@ button:hover {
 
 
 /* =========================
+   CONTACTO Y REDES SOCIALES
+========================= */
+
+.contact-intro {
+    margin: -20px auto 36px;
+    color: #c5c5c5;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.contact-form,
+.social-panel {
+    min-width: 0;
+    padding: 32px;
+    background: linear-gradient(145deg, #1d1d1d, #171717);
+    border: 1px solid rgba(212, 175, 55, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
+}
+
+.contact-form {
+    max-width: none;
+    margin: 0;
+    gap: 20px;
+}
+
+.contact-form h3,
+.social-panel h3 {
+    margin-bottom: 2px;
+    color: #f4d879;
+    font-size: 23px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-field label {
+    color: #eeeeee;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 15px;
+    color: #ffffff;
+    background-color: #252525;
+    border: 1px solid #454545;
+    border-radius: 8px;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999999;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    margin-top: 2px;
+    background: linear-gradient(135deg, #a77d12, #d4af37);
+    font-weight: 700;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #8d690e, #bd9828);
+}
+
+.social-panel > p {
+    margin: 8px 0 24px;
+    color: #c5c5c5;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: grid;
+    gap: 12px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 62px;
+    padding: 10px 14px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 11px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.12);
+    box-shadow: 0 9px 20px rgba(0, 0, 0, 0.25);
+}
+
+.social-btn:focus-visible {
+    outline: 3px solid #f4d879;
+    outline-offset: 3px;
+}
+
+.social-icon-wrap {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    background: rgba(255, 255, 255, 0.17);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.social-btn .social-icon {
+    width: 23px;
+    height: 23px;
+    fill: currentColor;
+}
+
+.social-btn .instagram-icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.social-btn .instagram-dot {
+    fill: currentColor;
+    stroke: none;
+}
+
+.social-btn .tiktok-icon .tiktok-shadow {
+    fill: #fe2c55;
+}
+
+.social-btn .tiktok-icon .tiktok-cyan {
+    fill: #25f4ee;
+}
+
+.social-btn .tiktok-icon path:not(.tiktok-shadow):not(.tiktok-cyan) {
+    fill: #ffffff;
+}
+
+.social-arrow {
+    margin-left: auto;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.social-btn.whatsapp {
+    background: linear-gradient(110deg, #138c4c, #20b85d);
+}
+
+.social-btn.instagram {
+    background: linear-gradient(110deg, #8a35a8, #d62976, #f77737);
+}
+
+.social-btn.facebook {
+    background: linear-gradient(110deg, #1555a8, #1877f2);
+}
+
+.social-btn.x {
+    background: linear-gradient(110deg, #111111, #292929);
+}
+
+.social-btn.tiktok {
+    background: linear-gradient(110deg, #111111, #292929);
+}
+
+/* =========================
    FORMULARIO
 ========================= */
 
@@ -423,6 +625,17 @@ form textarea {
     height: 150px;
 
     resize: vertical;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form,
+    .social-panel {
+        padding: 26px;
+    }
 }
 
 .login-main {
