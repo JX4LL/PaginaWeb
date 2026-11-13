@@ -70,3 +70,12 @@ function ampliarImagen(imagen) {
     imagen.classList.add("activa");
     galeria.classList.add("imagen-abierta");
 }
+
+const nombrePerfil = document.getElementById("profileUserName");
+if (nombrePerfil) {
+    const nombreUsuario = sessionStorage.getItem("nombreUsuario");
+    if (nombreUsuario) {
+        nombrePerfil.textContent = nombreUsuario;
+        nombrePerfil.hidden = false;
+    }
+}
