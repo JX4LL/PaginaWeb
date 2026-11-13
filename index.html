@@ -7,11 +7,12 @@
     <!-- Conexión con CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Conexión con Supabase SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
     <!-- Tu archivo separado de Supabase -->
-    <script src="supabase.js"></script>
+    <script src="DataBase.js" defer></script>
     <!-- Tu archivo de scripts generales -->    
-    <script src="script.js"></script></head>
+    <script src="script.js" defer></script>
+</head>
 <body>
     <!-- =========================
          ENCABEZADO
@@ -49,6 +50,7 @@
                     <circle cx="12" cy="8" r="4"></circle>
                     <path d="M4 21a8 8 0 0 1 16 0"></path>
                 </svg>
+                <span id="profileUserName" class="profile-user-name" hidden></span>
             </summary>
             <div class="profile-dropdown">
                 <a href="registro.html">Registrarse</a>
@@ -92,23 +94,23 @@
         <h2>Gorras</h2>
         <div class="cards">
             <div class="card ">
-                <img class="Serviceimage" src="Gorra1.jpg" alt="Gorra 1">
+                <img class="Serviceimage" src="Productos/Gorra1.jpg" alt="Gorra 1">
                 <h3>Gorra Con Bordado a Mano</h3>
                 <button onclick="mostrarServicio('Buena eleccion')">
                     Ver más
                 </button>
             </div>
             <div class="card">
-                <img class="Serviceimage" src="Gorra2.jpg" alt="Gorra 2">
+                <img class="Serviceimage" src="Productos/Gorra2.jpg" alt="Gorra 2">
                 <h3>Gorra con Estrella</h3>
                 <button onclick="mostrarServicio('Buena eleccion')">
                     Ver más
                 </button>
             </div>
             <div class="card">
-                <img class="Serviceimage" src="Gorra3.jpg" alt="Gorra 3">
+                <img class="Serviceimage" src="Productos/Gorra3.jpg" alt="Gorra 3">
                 <h3>Gorra de Algodón</h3>
-                <button onclick="mostrarServicio('Buena eleccion')">
+                <button onclick="mostrarServicio('Servicio 03')">
                     Ver más
                 </button>
             </div>
@@ -121,23 +123,23 @@
         <h2>Sombreros</h2>
         <div class="cards">
             <div class="card ">
-                <img class="Serviceimage" src="Sombrero1.jpg" alt="Sombrero 1">
+                <img class="Serviceimage" src="Productos/Sombrero1.jpg" alt="Sombrero 1">
                 <h3>Sombrero Con Bordado a Mano</h3>
                 <button onclick="mostrarServicio('Buena eleccion')">
                     Ver más
                 </button>
             </div>
             <div class="card">
-                <img class="Serviceimage" src="Sombrero2.jpg" alt="Sombrero 2">
+                <img class="Serviceimage" src="Productos/Sombrero2.jpg" alt="Sombrero 2">
                 <h3>Sombrero con Estrella</h3>
                 <button onclick="mostrarServicio('Buena eleccion')">
                     Ver más
                 </button>
             </div>
             <div class="card">
-                <img class="Serviceimage" src="Sombrero3.jpg" alt="Sombrero 3">
+                <img class="Serviceimage" src="Productos/Sombrero3.jpg" alt="Sombrero 3">
                 <h3>Sombrero de Algodón</h3>
-                <button onclick="mostrarServicio('Buena eleccion')">
+                <button onclick="mostrarServicio('Servicio 03')">
                     Ver más
                 </button>
             </div>
@@ -150,21 +152,21 @@
         <h2>Ponchos</h2>
         <div class="cards">
             <div class="card ">
-                <img class="Serviceimage" src="Poncho1.jpg" alt="Poncho 1">
+                <img class="Serviceimage" src="Productos/Poncho1.jpg" alt="Poncho 1">
                 <h3>Poncho Con Bordado a Mano</h3>
                 <button onclick="mostrarServicio('Buena eleccion')">
                     Ver más
                 </button>
             </div>
             <div class="card">
-                <img class="Serviceimage" src="Poncho2.jpg" alt="Poncho 2">
+                <img class="Serviceimage" src="Productos/Poncho2.jpg" alt="Poncho 2">
                 <h3>Poncho estrella</h3>
                 <button onclick="mostrarServicio('Buena eleccion')">
                     Ver más
                 </button>
             </div>
             <div class="card">
-                <img class="Serviceimage" src="Poncho3.jpg" alt="Poncho 3">
+                <img class="Serviceimage" src="Productos/Poncho3.jpg" alt="Poncho 3">
                 <h3>Poncho de Algodón</h3>
                 <button onclick="mostrarServicio('Buena eleccion')">
                     Ver más
@@ -179,17 +181,17 @@
         <h2>Galería</h2>
         <div class="galeria">
             <img
-                src="Doma.jpg"
+                src="FotosCaballos/Doma.jpg"
                 alt="Imagen 1"
                 onclick="ampliarImagen(this)"   
             >
             <img
-                src="Paseo.jpg"
+                src="FotosCaballos/Paseo.jpg"
                 alt="Imagen 2"
                 onclick="ampliarImagen(this)"   
             >
             <img
-                src="Pesebrera.jpg"
+                src="FotosCaballos/Pesebrera.jpg"
                 alt="Imagen 3"
                 onclick="ampliarImagen(this)"   
             >
